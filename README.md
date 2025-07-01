@@ -105,7 +105,7 @@ These challenges are especially significant for low-resource languages and real-
 - Optimizer: Adam (lr = 1e‑3)
 - Scheduler: StepLR(step\_size=20, gamma=0.5)
 - Loss: CrossEntropy
-- Trained for 250 epochs with best model checkpointing
+- Trained for 300 epochs with best model checkpointing
 
 ---
 
