@@ -9,10 +9,10 @@
 3. [ASR Pipeline](#asr-pipeline)
 4. [ASR History](#asr-history)
 5. [Algorithms Implemented](#algorithms-implemented)
-6. [Quick Start](#quick-start)
+6. [Quick Start](#quickstart)
 7. [Project Structure](#project-structure)
 8. [Experimental Results](#experimental-results)
-9. [Record‑Your‑Own Demo](#record‑your‑own-demo)
+9. [Record‑Your‑Own Demo](#recordyourown-demo)
 10. [Limitations & Future Work](#limitations--future-work)
 
 ---
