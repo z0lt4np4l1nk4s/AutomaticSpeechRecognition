@@ -31,7 +31,7 @@ The goal is to **recognise isolated spoken digits (0–9)** from short audio cli
 
 ## 2. Dataset – Free Spoken Digit Dataset (FSDD)
 
-- **Size:** \~2,000 WAV files, 8 kHz, mono, ≈1 s per clip
+- **Size:** \~3,000 WAV files, 8 kHz, mono, ≈1 s per clip
 - **Speakers:** 6
 - **Licence:** Creative Commons BY 4.0
 - **Repo:** [https://github.com/Jakobovski/free-spoken-digit-dataset](https://github.com/Jakobovski/free-spoken-digit-dataset)
