@@ -13,11 +13,11 @@
 7. [Project Structure](#project-structure)
 8. [Experimental Results](#experimental-results)
 9. [Record‑Your‑Own Demo](#record‑your‑own-demo)
-10. [Limitations and Future Work](#limitations-and-future-work)
+10. [Limitations & Future Work](#limitations--future-work)
 
 ---
 
-## 1. Problem Statement
+## Problem Statement
 
 The goal is to **recognise isolated spoken digits (0–9)** from short audio clips.  We build and compare three classical ASR approaches:
 
@@ -29,7 +29,7 @@ The goal is to **recognise isolated spoken digits (0–9)** from short audio cli
 
 ---
 
-## 2. Dataset – Free Spoken Digit Dataset (FSDD)
+## Dataset – Free Spoken Digit Dataset (FSDD)
 
 - **Size:** \~3,000 WAV files, 8 kHz, mono, ≈1 s per clip
 - **Speakers:** 6
@@ -38,7 +38,7 @@ The goal is to **recognise isolated spoken digits (0–9)** from short audio cli
 
 ---
 
-## 3. ASR Pipeline
+## ASR Pipeline
 
 1. **Pre‑processing:**  Normalise volume, optional Voice Activity Detection (VAD)
 2. **Feature Extraction:**
@@ -50,7 +50,7 @@ The goal is to **recognise isolated spoken digits (0–9)** from short audio cli
 
 ---
 
-## 4. ASR History
+## ASR History
 - **1952 – Audrey:** Bell Labs’ first digit recogniser
 - **1960s – DTW:** dynamic time warping aligns variable speaking speed
 - **1980s – GMM‑HMM:** Rabiner & colleagues formalise the HMM‑based pipeline
@@ -59,26 +59,26 @@ The goal is to **recognise isolated spoken digits (0–9)** from short audio cli
 
 ---
 
-## 5. Algorithms Implemented
+## Algorithms Implemented
 
-### 5.1 Dynamic Time Warping (DTW)
+### Dynamic Time Warping (DTW)
 
 - *Pros*: Zero training, interpretable distance path.
 - *Cons*: O(N·T²) runtime, sensitive to noise.
 
-### 5.2 Gaussian‑Mixture HMM
+### Gaussian‑Mixture HMM
 
 - 5 hidden states, 4 Gaussians/state, diagonal covariance.
 - Trained per digit with Baum‑Welch, inference via Viterbi log‑likelihood
 
-### 5.3 Convolutional Neural Network
+### Convolutional Neural Network
 
 - 1 × 64 × 128 log‑Mel input → Conv32 → Conv64 → GAP → Linear10.
 - \~40 k parameters; trained 8 epochs with Adam (lr = 1e‑3).
 
 ---
 
-## 6. Quick Start
+## Quick Start
 
 Clone the repository
 ```bash
@@ -116,7 +116,7 @@ Launch Jupyter / VS Code and open **notebook.ipynb** them eun the notebook **top
 
 ---
 
-## 7. Project Structure
+## Project Structure
 
 ```text
 ├── notebook.ipynb
@@ -126,7 +126,7 @@ Launch Jupyter / VS Code and open **notebook.ipynb** them eun the notebook **top
 
 ---
 
-## 8. Experimental Results
+## Experimental Results
 
 | Model    | Accuracy (FSDD test split) |
 | -------- | -------------------------- |
@@ -138,7 +138,7 @@ Confusion matrices are generated automatically in the notebook (`sklearn.metrics
 
 ---
 
-## 9. Record‑Your‑Own Demo
+## Record‑Your‑Own Demo
 
 ```python
 # Inside the notebook, Section 7:
@@ -152,7 +152,7 @@ Predictions from all three models are printed; compare which algorithm copes bes
 
 ---
 
-## 10. Limitations & Future Work
+## Limitations & Future Work
 
 - **Isolated digits** only – no continuous speech or language model
 - Small dataset → models may overfit speakers & noise profile
