@@ -9,11 +9,12 @@
 3. [ASR Pipeline](#asr-pipeline)
 4. [ASR History](#asr-history)
 5. [Algorithms Implemented](#algorithms-implemented)
-6. [Quick Start](#quickstart)
-7. [Project Structure](#project-structure)
-8. [Experimental Results](#experimental-results)
-9. [Record‑Your‑Own Demo](#recordyourown-demo)
-10. [Limitations & Future Work](#limitations--future-work)
+6. [Challenges in ASR](#challenges-in-asr)
+7. [Quick Start](#quickstart)
+8. [Project Structure](#project-structure)
+9. [Experimental Results](#experimental-results)
+10. [Record‑Your‑Own Demo](#recordyourown-demo)
+11. [Limitations & Future Work](#limitations--future-work)
 
 ---
 
@@ -89,6 +90,22 @@ The goal is to **recognise isolated spoken digits (0–9)** from short audio cli
 - Scheduler: StepLR(step\_size=20, gamma=0.5)
 - Loss: CrossEntropy
 - Trained for 250 epochs with best model checkpointing
+
+---
+
+## Challenges in ASR
+
+Automatic Speech Recognition (ASR) systems face a wide range of challenges:
+
+- **Speaker variability:** Differences in pitch, accent, speed, and pronunciation between speakers can reduce model generalisation.
+- **Background noise:** Environmental sounds and microphone quality introduce signal distortions.
+- **Coarticulation and prosody:** The way sounds blend together in natural speech can confuse phoneme boundaries.
+- **Data scarcity:** Training high-performance ASR models typically requires large annotated datasets.
+- **Out-of-vocabulary words:** Traditional systems struggle with new or rare terms not seen during training.
+- **Latency and computation:** Real-time applications demand fast and resource-efficient models.
+- **Language diversity:** Supporting multiple languages, dialects, and code-switching adds complexity.
+
+These challenges are especially significant for low-resource languages and real-time or noisy settings.
 
 ---
 
@@ -179,4 +196,3 @@ Predictions from all three models are printed; compare which algorithm copes bes
 **Next steps**: data augmentation, fine‑tuning `wav2vec2‑base` on FSDD, adding CTC loss, streaming inference.
 
 ---
-
