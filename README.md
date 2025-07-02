@@ -157,6 +157,7 @@ Launch Jupyter / VS Code and open **notebook.ipynb** then run the notebook **top
 ## Project Structure
 
 ```text
+├── assets/
 ├── notebook.ipynb
 ├── requirements.txt
 └── README.md
