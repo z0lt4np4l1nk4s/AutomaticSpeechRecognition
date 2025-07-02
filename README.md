@@ -60,10 +60,8 @@ The goal is to **recognise isolated spoken digits (0–9)** from short audio cli
 5. **Evaluation:**  Digit Accuracy, Confusion Matrix
 
 ![MFCC](assets/mfcc.png)
-Waveform
 
 ![Log-mel](assets/logmel.png)
-Log-Mel spectogram
 
 ---
 
